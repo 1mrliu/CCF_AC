@@ -16,7 +16,7 @@ import java.util.List;
  "()(())",
  "()()()"
  ]
-
+ 使用递归的方法进行解决
  */
 public class GenerateParentheses_22 {
     public List<String> generateParenthesis(int n) {

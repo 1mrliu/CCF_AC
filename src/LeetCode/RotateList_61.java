@@ -20,7 +20,6 @@ package LeetCode;
  rotate 2 steps to the right: 1->2->0->NULL
  rotate 3 steps to the right: 0->1->2->NULL
  rotate 4 steps to the right: 2->0->1->NULL
-
  */
 public class RotateList_61 {
     public class ListNode {
@@ -36,10 +35,11 @@ public class RotateList_61 {
         dummy.next = head;
         ListNode fast = dummy, slow = dummy;
         int i;
+        // get the length of list
         for(i=0;fast.next !=null;i++){
             fast = fast.next;
         }
-
+        // i-k%i the node
         for(int j=i-k%i;j>0;j--){
             slow = slow.next;
         }

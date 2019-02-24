@@ -17,9 +17,9 @@ package LeetCode;
  */
 public class JumpGame_55 {
     public boolean canJump(int[] nums){
+        //最远能到达的坐标位置
         int reachable = 0;
-        boolean result = true;
-        for (int i = 0; i < nums.length; i++) {
+        for (int i = 0; i < nums.length; ++i) {
             if (i > reachable) {
                 return false;
             }

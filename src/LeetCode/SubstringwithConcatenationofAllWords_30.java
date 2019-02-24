@@ -24,6 +24,8 @@ public class SubstringwithConcatenationofAllWords_30 {
        final Map<String, Integer> counts = new HashMap<>();
         for (final String word : words) {
              counts.put(word, counts.getOrDefault(word,0)+1);
+             //Map的新方法getOrDefault(Object,V)允许调用者在代码语句中规定获得在map中符合提供的键的值，
+             // 否则在没有找到提供的键的匹配项的时候返回一个“默认值”。
         }
         final List<Integer> indexes = new ArrayList<>();
         final int n = s.length();

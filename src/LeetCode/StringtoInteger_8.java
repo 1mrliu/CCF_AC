@@ -5,6 +5,7 @@ import com.sun.org.apache.xml.internal.security.algorithms.implementations.Integ
 /**
  * Created by liudong on 2019/1/27.
  * Implement atoi which converts a string to an integer.
+ * Note:
  * Only the space character ' ' is considered as whitespace character.
  Assume we are dealing with an environment which could only store integers
  within the 32-bit signed integer range: [−231,  231 − 1]. If the numerical

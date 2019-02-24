@@ -9,7 +9,9 @@ package JianZhiOffer;
  */
 public class TiHuanKongGe {
     public String replaceSpace(StringBuffer str) {
-       //return str.toString().replaceAll(" ","%20");
+        // 自带函数的方法一
+        // return str.toString().replaceAll(" ","%20");
+        // 方法二
         int count = 0;
         for (int i = 0; i < str.length(); i++) {
             if (str.charAt(i) == ' '){
