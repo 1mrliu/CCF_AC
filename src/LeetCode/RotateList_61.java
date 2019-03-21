@@ -20,6 +20,19 @@ package LeetCode;
  rotate 2 steps to the right: 1->2->0->NULL
  rotate 3 steps to the right: 0->1->2->NULL
  rotate 4 steps to the right: 2->0->1->NULL
+ 因为与列表的长度相比，n可能是大数。所以我们需要知道链表的长度。之后，将第（ln％l）个节点之后的列表移到前面以完成轮换。
+
+ 例如：{1,2,3} k = 2将第一个节点后的列表移到前面
+
+ 例如：{1,2,3} k = 5，在这种情况下，将（3-5％3 = 1）st节点后的列表移到前面。
+
+ 所以代码有三个部分。
+
+ 得到长度
+
+ 移至第（ln％l）个节点
+
+ 3）做旋转
  */
 public class RotateList_61 {
     public class ListNode {

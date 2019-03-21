@@ -21,10 +21,10 @@ public class ZhiZiXing_ErChaShu {
     }
     public static ArrayList<ArrayList<Integer>> Print(TreeNode pRoot){
         int layer =1;
-        // s1 存放奇数层节点
+        // s1 存放奇数层节点   奇数层先放右边然后再放左边 入栈
         Stack<TreeNode> s1 = new Stack<TreeNode>();
         s1.push(pRoot);
-        // s2 存放偶数层节点
+        // s2 存放偶数层节点  偶数层先放左边然后再放右边 入栈
         Stack<TreeNode> s2 = new Stack<TreeNode>();
 
         ArrayList<ArrayList<Integer>> list = new ArrayList<ArrayList<Integer>>();

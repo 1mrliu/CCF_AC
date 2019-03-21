@@ -61,13 +61,13 @@ public class SetMatrixZeroes_73 {
                 }
             }
         }
-        // raw == 0
+        //第一行
         if(fr){
             for (int j = 0; j < matrix[0].length; j++) {
                 matrix[0][j] = 0;
             }
         }
-        // column == 0
+        // 第一列
         if(fc) {
             for (int i = 0; i < matrix.length; i++) {
                 matrix[i][0] = 0;

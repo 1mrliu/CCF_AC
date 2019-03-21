@@ -42,11 +42,11 @@ public class UniquePathsII_63 {
             obstacleGrid[i][0] = (obstacleGrid[i][0] == 0 && obstacleGrid[i-1][0]==1) ? 1:0;
         }
         // filling the value of the row
-        for (int i = 0; i < C; i++) {
+        for (int i = 1; i < C; i++) {
             obstacleGrid[0][i] = (obstacleGrid[0][i] == 0 && obstacleGrid[0][i-1] == 1) ? 1:0;
         }
-        for (int i = 0; i < R; i++) {
-            for (int j = 0; j < C; j++) {
+        for (int i = 1; i < R; i++) {
+            for (int j = 1; j < C; j++) {
                 if (obstacleGrid[i][j] == 0) {
                     obstacleGrid[i][j] = obstacleGrid[i-1][j] + obstacleGrid[i][j-1];
                 }else{
@@ -55,5 +55,10 @@ public class UniquePathsII_63 {
             }
         }
         return obstacleGrid[R-1][C-1];
+    }
+    public static void main(String[] args){
+        UniquePathsII_63 ss = new UniquePathsII_63();
+        int[][] matrix = {{0,0,0},{0,1,0},{0,0,0}};
+        System.out.print(ss.uniquePathsWithObstacles(matrix));
     }
 }
