@@ -16,7 +16,7 @@ package LeetCode;
  Output: "bb"
 
  */
-public class LongestPalindromicSubstring_5 {
+public class DP_LongestPalindromicSubstring_5 {
 
     private  int lo, maxLen;
     private String longestPalindrome(String s) {
@@ -44,7 +44,7 @@ public class LongestPalindromicSubstring_5 {
 
     public static void main(String[] args){
         String s = "abcdmadamabcd";
-        LongestPalindromicSubstring_5 l = new LongestPalindromicSubstring_5();
+        DP_LongestPalindromicSubstring_5 l = new DP_LongestPalindromicSubstring_5();
         String result = l.longestPalindrome(s);
         System.out.print(result);
     }

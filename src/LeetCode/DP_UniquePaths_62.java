@@ -23,7 +23,7 @@ package LeetCode;
  dp[i][j] = dp[i-1][j] + dp[i][j-1]
 
  */
-public class UniquePaths_62 {
+public class DP_UniquePaths_62 {
     public int uniquePaths(int m, int n) {
         Integer[][] map = new Integer[m][n];
         for (int i = 0; i < m; i++) {
@@ -40,7 +40,7 @@ public class UniquePaths_62 {
         return map[m-1][n-1];
     }
     public static void main(String[] args){
-        UniquePaths_62 ss = new UniquePaths_62();
+        DP_UniquePaths_62 ss = new DP_UniquePaths_62();
         int m  =3, n=2;
         System.out.print(ss.uniquePaths(m,n));
     }

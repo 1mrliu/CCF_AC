@@ -25,7 +25,7 @@ package LeetCode;
  time o(M*N)
  space o(1)
  */
-public class UniquePathsII_63 {
+public class DP_UniquePathsII_63 {
     public int uniquePathsWithObstacles(int[][] obstacleGrid) {
         // row
         int R = obstacleGrid.length;
@@ -57,7 +57,7 @@ public class UniquePathsII_63 {
         return obstacleGrid[R-1][C-1];
     }
     public static void main(String[] args){
-        UniquePathsII_63 ss = new UniquePathsII_63();
+        DP_UniquePathsII_63 ss = new DP_UniquePathsII_63();
         int[][] matrix = {{0,0,0},{0,1,0},{0,0,0}};
         System.out.print(ss.uniquePathsWithObstacles(matrix));
     }

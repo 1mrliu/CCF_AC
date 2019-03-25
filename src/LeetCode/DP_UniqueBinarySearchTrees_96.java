@@ -18,7 +18,7 @@ package LeetCode;
  /     /       \                 \
  2     1         2                 3
  */
-public class UniqueBinarySearchTrees_96 {
+public class DP_UniqueBinarySearchTrees_96 {
     private int numTrees(int n) {
       int[] dp = new int[n+1];
       dp[0] = 1;
@@ -32,7 +32,7 @@ public class UniqueBinarySearchTrees_96 {
     }
 
     public static void main(String[] args){
-        UniqueBinarySearchTrees_96 ss = new UniqueBinarySearchTrees_96();
+        DP_UniqueBinarySearchTrees_96 ss = new DP_UniqueBinarySearchTrees_96();
         int n = 4;
         System.out.print(ss.numTrees(n));
 
