@@ -53,14 +53,6 @@ public class _4_MedianofTwoSortedArrays {
         return result ;
     }
 
-    public static void main(String[] args){
-        int[] nums1 = {1, 2};
-        int[] nums2 = {3, 4};
-
-        _4_MedianofTwoSortedArrays mesa =  new _4_MedianofTwoSortedArrays();
-        double result =  mesa.findMedianSortedArrays(nums1,nums2);
-        System.out.print(result);
-    }
 
 
 }
