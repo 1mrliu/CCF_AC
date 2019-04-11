@@ -30,17 +30,17 @@ public class _8_StringtoInteger {
         char[] chars = str.toCharArray();
         int signum = 1, head = 0;
         //treat sign
-        if (chars[head] == '+' || chars[head] == '-') {
+        if (Character.isDigit(chars[head])|| chars[head] == '-') {
             if (chars[head] == '-') {
                 signum = -1;
             }
             head++;
         }
-        long result = 0l;
+        long result = 0;
         long max = (long)Integer.MAX_VALUE;
         long min = (long) Integer.MIN_VALUE;
         while(head < chars.length && Character.isDigit(chars[head])){
-            result = (result * 10) + (((int)chars[head++]-'0')*signum);
+            result = (result * 10) + ((Character.getNumericValue(chars[head++]))*signum);
             if (result > 0 && result > max) {
                 result = max;
                 break;
@@ -54,7 +54,7 @@ public class _8_StringtoInteger {
        return (int)result;
     }
     public static void main(String[] args){
-        String a = "-438";
+        String a = "";
         _8_StringtoInteger ss = new _8_StringtoInteger();
         System.out.print(ss.myAtoi(a));
 
