@@ -17,7 +17,7 @@ public class _24_SwapNodesinPairs {
       }
     }
     public ListNode swapPairs(ListNode head) {
-        if ((head == null) || (head.next==null)) {
+        if ((head ==  null) || (head.next==null)) {
             return head;
         }
         ListNode n = head.next;
