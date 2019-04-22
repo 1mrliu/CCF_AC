@@ -16,6 +16,7 @@ public class _4_rebuildBinaryTree {
         }
     }
 
+    // 已知前序遍历和中序遍历  构建二叉树
     private TreeNode reConstructBinaryTree(int[] pre, int[] in) {
         if (pre == null || in == null) {
             return null;
@@ -39,6 +40,34 @@ public class _4_rebuildBinaryTree {
                 root.left = dealBinaryTree(pre, startPreOrder + 1, startPreOrder + (i - startInOrder), in, startInOrder, i - 1);
 
                 root.right = dealBinaryTree(pre, (i - startInOrder) + startPreOrder + 1, endPreOrder, in, i + 1, endInOrder);
+            }
+        }
+        return root;
+    }
+
+    // 已知中序遍历和后序遍历 重建二叉树
+    private   TreeNode rebuildBinaryTree2(int[] postOrder, int[] inOrder) {
+        if (postOrder == null || inOrder == null) {
+            return null;
+        }
+        TreeNode result_root = rebuildBinaryTreeCore2(postOrder, 0, postOrder.length - 1, inOrder, 0, inOrder.length - 1);
+        return result_root;
+    }
+
+    private   TreeNode rebuildBinaryTreeCore2(int[] postOrder,
+                                                 int startPostOrder, int endPostOrder, int[] inOrder,
+                                                 int startInOrder, int endInOrder) {
+
+        if (startPostOrder > endPostOrder || startInOrder > endInOrder) { // 终止递归的条件
+            return null;
+        }
+        TreeNode root = new TreeNode(postOrder[endPostOrder]);
+        for (int i = startInOrder; i <= endInOrder; i++) {
+            if (inOrder[i] == postOrder[endPostOrder]) {
+
+                root.left = rebuildBinaryTreeCore2(postOrder, startPostOrder, startPostOrder - 1 + (i - startInOrder), inOrder, startInOrder, i - 1);
+
+                root.right = rebuildBinaryTreeCore2(postOrder, startPostOrder + (i - startInOrder), endPostOrder - 1, inOrder, i + 1, endInOrder);
             }
         }
         return root;
