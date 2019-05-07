@@ -23,6 +23,7 @@ public class _28_ArrayChuXIanYiBanDeNumber {
                 times--;
             }
         }
+        //要找的数字是最后一次把次数设置为1时对应的数字 result
 
         int count =0;
         for (int i = 0; i < array.length; i++) {
