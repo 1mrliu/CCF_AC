@@ -19,7 +19,6 @@ import java.util.ArrayList;
  * 我们发现这种方法会得到重复的丑数，而且我们题目要求第N个丑数，这样的方法得到的丑数也是无序的。
  * 那么我们可以维护三个队列： u2 u3 u5
  *
- *
  */
 public class _33_UglyNumber {
     public int GetUglyNumber_Solution(int index) {
