@@ -26,6 +26,8 @@ public class _29_TopKMinNumber {
          *         if (input == null || k <= 0 || k > input.length) {
          *             return res;
          *         }
+         *         // 使用优先队列（PriorityQueue）进行处理  优先队列的作用是能保证每次取出的元素都是队列中权值最小的
+         *         // Java的优先队列每次取最小元素   C++m每次取出最大的元素
          *         Queue<Integer> queue = new PriorityQueue<>(k, Collections.reverseOrder());
          *
          *         for (int i = 0; i < input.length; i++) {
