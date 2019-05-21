@@ -56,7 +56,7 @@ public class ZhiZiXing_ErChaShu {
                         temp.add(node.val);
                         System.out.print(node.val+" ");
                         s1.push(node.right);
-                        s2.push(node.left);
+                        s1.push(node.left);
                     }
                 }
                 if (!temp.isEmpty()) {
