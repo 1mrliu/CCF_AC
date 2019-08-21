@@ -8,7 +8,7 @@ import java.util.Queue;
  * 把二叉树打印成多行
  * 从上到下按层打印二叉树，同一层结点从左至右输出。每一层输出一行。
  */
-public class _61_DaYinDuoHangBinaryTree {
+public class _60_DaYinDuoHangBinaryTree {
     public class TreeNode {
         int val = 0;
         TreeNode left = null;
