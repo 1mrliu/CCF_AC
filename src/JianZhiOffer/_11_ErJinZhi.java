@@ -18,10 +18,23 @@ public class _11_ErJinZhi {
         }
         return count;
     }
+    // new method
+    public int numberOf1_1(int n){
+        int count = 0;
+        while (n!=0){
+            count++;
+            //每进行一次 n&(n-1)计算，结果中都会少一位，而且是最后一位
+            n = n&(n-1);
+        }
+
+        return count;
+    }
+
 
     public static void main(String[] args){
         _11_ErJinZhi ss = new _11_ErJinZhi();
         int n = 10;
+        //System.out.print(ss.numberOf1_1(n));
         System.out.print(ss.NumberOf1(n));
 
     }
