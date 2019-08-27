@@ -44,7 +44,7 @@ public class _55_CircleOfList {
     }
 
     // 判断是不是环
-    public ListNode getCircle(ListNode pHead){
+    private ListNode getCircle(ListNode pHead){
         ListNode slow = pHead;
         ListNode quick = pHead.next.next;
         while (quick.next != null && slow.next!=null){
@@ -57,5 +57,30 @@ public class _55_CircleOfList {
             }
         }
         return null;
+    }
+    // 解法2
+    // 首先判断是不是一个环
+    private ListNode findLoopPort(ListNode head){
+        // 先判断像雨点的位置
+        ListNode slow = head;
+        ListNode fast = head;
+        if (fast == null){
+            return null;
+        }
+        while (fast != null && fast.next != null){
+            fast = fast.next.next;
+            slow = slow.next;
+            if (fast == slow)
+                break;
+        }
+        if (fast == null || fast.next == null)
+            return null;
+
+        slow = head;
+        while (slow != fast){
+            slow = slow.next;
+            fast = fast.next;
+        }
+        return slow;
     }
 }
