@@ -33,5 +33,20 @@ public class _2_TiHuanKongGe {
         }
         return str.toString();
     }
+    // 方法3
+    public String replaceSpace2(StringBuffer str){
+        int len = str.length();
+        StringBuffer sb = new StringBuffer();
+        for (int i = 0; i < len; i++) {
+            char cha = str.charAt(i);
+            if (String.valueOf(cha).equals(" ")){
+                sb.append("%20");
+            }else{
+                sb.append(cha);
+            }
+        }
+        return sb.toString();
+
+    }
 
 }
