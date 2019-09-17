@@ -1,6 +1,6 @@
 package DataStructure;
 
-// 转圈打印输出矩阵的值
+// 旋转输出矩阵的值
 public class _1_ {
     public void spiralOrderPrint(int[][] matrix){
         int tR = 0;
