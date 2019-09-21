@@ -16,15 +16,26 @@ public class _61_XuLieHuaBinaryTree {
         }
 
     }
-//    // 序列化二叉树
-//    String Serialize(TreeNode root) {
-//
-//
-//    }
-//    // 反序列化二叉树
-//    TreeNode Deserialize(String str) {
-//
-//
-//    }
+    int index  = -1;
+    // 序列化二叉树
+    String Serialize(TreeNode root) {
+        if (root == null) return "#!";
+        String res = root.val + "!";
+        res  += Serialize(root.left);
+        res  += Serialize(root.right);
+        return res;
+    }
+    // 反序列化二叉树
+    TreeNode Deserialize(String str) {
+        index++;
+        String[] strs = str.split("!");
+        TreeNode node = null;
+        if (!strs[index].equals("#")){
+            node = new TreeNode(Integer.valueOf(strs[index]));
+            node.left = Deserialize(str);
+            node.right = Deserialize(str);
+        }
+        return node;
+    }
 
 }
