@@ -22,8 +22,6 @@ public class CCF_1 {
         for (int i = 0; i < people.length; i++) {
             System.out.println(people[i]);
         }
-
     }
-
 
 }

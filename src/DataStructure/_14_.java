@@ -15,7 +15,7 @@ public class _14_ {
         }
 
         for (int i = 1; i < str2.length; i++) {
-            dp[0][i] = Math.max(dp[i-1][0],str1[0] == str2[i] ? 1:0);
+            dp[0][i] = Math.max(dp[0][i-1],str1[0] == str2[i] ? 1:0);
         }
 
         for (int i = 1; i < str1.length; i++) {

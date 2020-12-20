@@ -9,8 +9,11 @@ public class QuickSort {
 
     public void sort(int[] arr,int low,int high){
         if (low < high) {
+            // 第一次找到的点进行排序
             int pivot = Partition(arr, low, high);
+            // 对左边的数据进行排序
             sort(arr, low, pivot - 1);
+            // 对右边的数据进行排序
             sort(arr, pivot + 1, high);
         }
     }
